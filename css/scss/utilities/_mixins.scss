@@ -1,5 +1,33 @@
-// Mixins
+/* ============================================= */
+/*              Helper Mixins                    */
+/* ============================================= */
 
-// Media Queries
+@mixin font-styles($f-size: null, $f-weight: null, $f-lh: null, $f-color: null, $f-style: null) {
+  font-size: $f-size;
+  font-weight: $f-weight;
+  line-height: $f-lh;
+  color: $f-color;
+  font-style: $f-style;
+}
 
-// Flexbox Settings
+@mixin btn-hover-fade($color) {
+  background-color:$color;
+  &:hover {
+    background-color:lighten($color, 15%);
+  }
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+@mixin mq($break) {
+  @if $break == 'md' {
+    @media #{$break-md} {
+      @content;
+    }
+  }
+  @else {
+    @error "Sorry, no breakpoint was defined";
+  }
+}

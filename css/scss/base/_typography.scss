@@ -3,13 +3,13 @@
 /* ============================================= */
 
 * {
-  font-family: 'Lato', sans-serif;
-  color: #777;
+  font-family: $font-base;
+  color: $main-font-color;
   box-sizing: border-box;
 }
 
 p {
-  line-height: 1.45em;
+  @include font-styles($f-lh: 1.45em);
 }
 
 a {
@@ -21,27 +21,24 @@ a {
 /*              Typography                       */
 /* ============================================= */
 
-.headline-primary {
-  color: #58e1c1;
-  margin-left: 10px;
-}
-
-.headline-secondary {
-  font-weight: 300;
-  color: #777;
+.headline {
+  &-primary {
+    @include font-styles($f-color: $primary);
+    margin-left: 10px;
+  }
+  &-secondary {
+    @include font-styles($f-weight: 300, $f-color: $main-font-color);
+  }
 }
 
 .link {
-  color: #51ddfc;
-  font-weight: 700;
+  @include font-styles($f-weight: 700, $f-color: $default);
 }
 
 .blockquote {
-  font-size: 1.5em;
-  font-weight: 300;
-  font-style: italic;
+  @include font-styles($f-size: 1.5em, $f-weight: 300, $f-style: italic);
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 8px solid #58e1c1;
+  border-left: 8px solid $primary;
   border-radius: 5px;
 }

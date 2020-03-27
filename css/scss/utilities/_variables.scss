@@ -1,11 +1,28 @@
-// Variables
+/* ============================================= */
+/*              Colors                           */
+/* ============================================= */
 
-// Fonts
+$white: #fff;
+$primary: #58e1c1;
 
-$font-base: 'Helvetica Neue', Helvetica, Ariel, sans-serif;
+$default:#51ddfc;
+$error:#e4757a;
+$info:#927bc1;
+$success:#63cc82;
+$warning:#fd7856;
 
-// Media Queries
+$main-font-color:#777;
 
-$breakpoint-sm: '(min-width:480px)';
-$breakpoint-md: '(min-width: 768px)';
-$breakpoint-lg: '(min-width: 1400px)';
+/* ============================================= */
+/*              Fonts                            */
+/* ============================================= */
+
+$font-base: 'Lato', sans-serif;
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+$break-sm: '(min-width: 480px)';
+$break-md: '(min-width: 768px)';
+$break-lg: '(min-width: 1400px)';

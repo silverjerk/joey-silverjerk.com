@@ -5,29 +5,36 @@
 .btn {
   margin-top: 15px;
   width: 100%;
-  color: #fff;
+  color: $white;
   border: none;
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
+  transition: background-color 200ms ease-in-out;
+  @include mq(md) {
+    padding: 10px 30px;
+    & + .btn {
+      margin-left: 10px;
+    }
+  }
 }
 
 .default {
-  background-color: #51ddfc;
+  @include btn-hover-fade($default);
 }
 
 .error {
-  background-color: #e4757a;
+  @include btn-hover-fade($error);
 }
 
 .info {
-  background-color: #927bc1;
+  @include btn-hover-fade($info);
 }
 
 .success {
-  background-color: #63cc82;
+  @include btn-hover-fade($success);
 }
 
 .warning {
-  background-color: #fd7856;
+  @include btn-hover-fade($warning);
 }
